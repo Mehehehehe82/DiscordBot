@@ -29,7 +29,7 @@ prefixes = [
 # No, silly. Not your IP.
 devs = [
 	453204873346023424, # Hyperboid, me
-	676572364460392498 # another person
+	676572364460392498 # the guy who thinks discord bots can leak your IP
 ]
 bot = commands.Bot(command_prefix = prefixes)
 #  endregion
@@ -120,16 +120,13 @@ with open('badwords.txt','r') as f:
 
 @bot.event
 async def on_ready():
-	print("---   CONNECTED.   ---")
-	print("Connected!")
+	print("[INFO] Connected!")
 	await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=STATUS))
 
 @bot.event 
 async def on_message(message):
-	if settings["verbose"]:
+	if settings["verbose"]: # what do you mean this is a privac
 		print(f'''[VB] User {message.author.name} sent message "{message.content}"''')
-	else:
-		print('Someone sent a message but verbose is off.')
 	if bad_word_checker(message.content):
 		await message.delete()
 		await prettymsg(message.channel, "Only I'm allowed to `fricking` swear! <:WC:799371267849453581>.")
