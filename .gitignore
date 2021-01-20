@@ -1,0 +1,4 @@
+# I don't know how gitignores work so I might be redundant
+bot.log
+__pycache__
+__pycache__/*
