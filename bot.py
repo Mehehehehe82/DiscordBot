@@ -29,22 +29,26 @@ prefixes = [
 # No, silly. Not your IP.
 devs = [
 	453204873346023424, # Hyperboid, me
-	676572364460392498, # MyCurse, the one who inspired me to revive this abandoned project
+	676572364460392498 # another person
 ]
 bot = commands.Bot(command_prefix = prefixes)
 #  endregion
 #  region Convenience functions
 async def prettymsg(ctx,
 	msg: str = "Sample text be like bruh",
-	header: str = "Hey!",
-	text: str = "",
-	thumbnail: str = "https://cdn.discordapp.com/avatars/783773656227512331/e6db612b2f469225fda5522f3e915d7a.webp"
+	Header: str = "Hey!",
+	RawText: str = "", # Good for mentioning people
+	ThumbnailURI: str = "https://cdn.discordapp.com/avatars/783773656227512331/e6db612b2f469225fda5522f3e915d7a.webp",
+	colorHex: int = 0xb86767
 ):
 	'''A quick embed creator with customizable defaults,'''
-	embed=discord.Embed(title=header, description=msg, color=0xb86767)
-	embed.set_thumbnail(url=thumbnail)
-	embed.set_footer(text="Discord bot created by hyperboid. This bot is open source! https://github.com/")
-	await ctx.send(embed=embed)
+	embed=discord.Embed(title=Header, description=msg, color=colorHex)
+	embed.set_thumbnail(url=ThumbnailURI)
+	if True: # Set this to false if you modify the code for your own use
+		embed.set_footer(text="Discord bot created by hyperboid. It's open source, check it out on github! https://github.com/Mehehehehe82/BotInnit")
+	else:
+		embed.set_footer(text="Based on the Discord bot created by hyperboid. It's open source, check it out on github! https://github.com/Mehehehehe82/BotInnit")
+	await ctx.send(RawText, embed=embed)
 #  endregion
 #  region Commands
 @bot.command(
