@@ -1,0 +1,20 @@
+# This is the configuration file. Edit it 
+Logging:
+  Log messages to terminal: true
+
+Authentication:
+  # This points to where the token is.
+  Bot token file: token.txt
+  # These users may run dev commands.
+  Authorized users:
+  - 453204873346023424
+
+Display:
+  Status text: '/tt help'
+
+Swear filter:
+  Enabled: true
+  Message:
+  - "Sorry, your message was filtered for swearing."
+  - "If you believe that was an error, please report it to a developer."
+  - "Test"

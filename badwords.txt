@@ -1,6 +1,6 @@
-$ Start lines with "$" for comments.
-r[e3]t[4a@]rd
+$ Start lines with "$" for comments. I think. I hope. I honestly don't know. Oh god I hope that didn't cause that stupid bug
+$r[e3]t[4a@]rd
 n[1i]gg([3e]r|[a4])
 
 $ Matches for "iamveryultraweirdchamp" and bypasses. a test term.
-[1i] ?[@a]m ?v[3e]ry ?u[l1]tra ?we[1i]r ?dch[@a]mp
+[1i][@a]mv[3e]ryu[l1]trawe[1i]rdch[@a]mp

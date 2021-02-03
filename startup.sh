@@ -1,9 +1,9 @@
 #!/bin/sh
 clear
 while true; do
-	python bot.py |&cat | tee -a bot.log
+	python __main__.py
 	EXIT=$?
-	echo "---   SHUT DOWN.   ---" | tee -a bot.log
+	# echo "---   SHUT DOWN.   ---" | tee -a bot.log
 	echo Exited with code ${EXIT}.
 	if [ $EXIT \> 0 ]; then
 		exit
